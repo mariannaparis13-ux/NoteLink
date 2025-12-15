@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1710162734135-8dc148f53abe?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #login {
+      background-color: rgb(76, 175, 80);
+      width: 75px;
+      height: 25;
+    }
+
+    #login:hover {
+      background-color: rgb(69, 160, 73);
+    }
+
+    .button {
+      position: absolute;
+      top: 37%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 50%;
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 100 75;
+      border: 5px;
+    }
+
+    h1,
+    h2,
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <br>
+  <form action="notes.php" method="GET">
+    <div class="button">
+      <select name="grade" class="input">
+        <option value="6">Grade 6</option>
+        <option value="7">Grade 7</option>
+        <option value="8">Grade 8</option>
+        <option value="9">Grade 9</option>
+      </select>
+      <br>
+      <select name="medium" class="input">
+        <option value="E">English medium</option>
+        <option value="S">Sinhala medium</option>
+        <option value="T">Tamil medium</option>
+      </select>
+      <br>
+      <input type="submit" value="Login" id="Login">
+    </div>
+  </form>
+
+</body>
+
+</html>

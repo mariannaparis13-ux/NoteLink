@@ -1,0 +1,137 @@
+<html>
+
+<head>
+   <title>NoteLink</title>
+   <meta charset="UTF-8">
+   <style>
+      body {
+         background-image: url('https://i.pinimg.com/736x/86/14/ca/8614ca6ebbd18955fc0ec9d9733e3f09.jpg');
+         background-repeat: repeat-x;
+         background-position: center;
+      }
+
+      .center {
+         width: 90%;
+         position: absolute;
+         top: 40%;
+         -ms-transform: translateY(-50%);
+         transform: translateY(-50%);
+         left: 50%;
+         -ms-transform: translateX(-50%);
+         transform: translateX(-50%);
+         text-align: center;
+      }
+
+      input[type=submit] {
+         width: 250px;
+         background-color: rgb(76, 175, 80);
+         color: white;
+         padding: 14px;
+         margin: 8px 0;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+      }
+
+      input[type=submit]:hover {
+         background-color: rgb(69, 160, 73);
+      }
+
+      .input {
+         width: 100%;
+         padding: 12px;
+      }
+
+      .date {
+         width: 45%;
+         padding: 12px;
+      }
+
+      .menudiv {
+         position: sticky;
+      }
+
+
+      /*Menu button*/
+      .a {
+         background-color: rgb(0, 255, 255);
+         color: black;
+         text-align: center;
+         text-decoration: none;
+         margin: 0.5px;
+         width: 24%;
+         display: inline-block;
+      }
+
+      /*Menu*/
+      div a:hover {
+         background-color: rgb(0, 220, 255);
+      }
+   </style>
+</head>
+
+<body>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <div class="menudiv">
+      <a href="dashboard.html" class="a">Home</a>
+      <a href="Addrequest.html" class="a">Add a request</a>
+      <a href="GetNotes.html" class="a">Notes</a>
+      <a href="Addrequest.html" class="a">Requests</a>
+   </div>
+   <div id="menu"></div>
+   <br>
+   <h2>Add A Request</h2>
+   <p>Need help? Send a request!</p>
+   <script>
+      fetch('menu.html')
+         .then(response => response.text())
+         .then(data => {
+            document.getElementById('menu').innerHTML = data;
+         });
+   </script>
+   <div class="center">
+      <form action="">
+         <select id="grade" name="grade" class="input">
+            <option value="G6">Grade 6</option>
+            <option value="G7">Grade 7</option>
+            <option value="G8">Grade 8</option>
+            <option value="G9">Grade 9</option>
+            <option value="G10">Grade 10</option>
+            <option value="G11">Grade 11</option>
+            <option value="G12">Grade 12</option>
+         </select>
+         <input type="text" placeholder="Subject" name="subjects" list="subjects" class="input" />
+         <datalist id="subjects">
+            <option value="Allsubjects">All Subjects</option>
+            <option value="Maths">Maths</option>
+            <option value="English">English</option>
+            <option value="Sinhala1">Sinhala(1st language)</option>
+            <option value=">Sinhala2">Sinhala(2nd language)</option>
+            <option value="Tamil1">Tamil(1st language)</option>
+            <option value="Tamil2">Tamil(2nd language)</option>
+            <option value="Art">Art</option>
+            <option value="Dancing">Dancing</option>
+            <option value="EM">E. Music</option>
+            <option value="WM">W. Music</option>
+            <option value="Geo">Geography</option>
+            <option value="History">History</option>
+            <option value="Science">Science</option>
+            <option value="Health">Health and Physical Education</option>
+            <option value="PTS">PTS</option>
+            <option value="Civic">Civic</option>
+            <option value="RC">Roman Catholicism</option>
+            <option value="Buddhism">Buddhism</option>
+            <option value="Islam">Islam</option>
+            <option value="ICT">ICT</option>
+         </datalist><br>
+         <label for="fdate">from</label>
+         <input type="date" id="fdate" name="fdate" class="date">
+         <label for="tdate">to</label>
+         <input type="date" id="tdate" name="tdate" class="date"><br>
+         <input type="text" placeholder="Lesson" class="input" optional><br>
+         <input type="submit" action="">
+      </form>
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title>Notes</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-image: url('https://i.pinimg.com/736x/f2/97/28/f297286a3a4cc0a8010ae1cbfa9a079d.jpg');
+      background-repeat: repeat-x;
+      background-position: center;
+    }
+
+    .center a {
+      color: black;
+      text-align: center;
+      padding: 3px;
+      text-decoration: none;
+      background-color: gold;
+      position: fixed;
+      top: 75;
+      left: 24;
+      width: 125px;
+    }
+
+    .center a:hover {
+      background-color: rgb(255, 200, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div id="menu"></div>
+  <h1>Notes</h1>
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('menu').innerHTML = data;
+      });
+  </script>
+  <div class="center">
+    <a href="Add request.html">+ Add request</a>
+  </div>
+</body>
+
+</html>
